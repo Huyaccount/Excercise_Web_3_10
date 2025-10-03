@@ -12,8 +12,8 @@ import java.util.List;
 @EnableMethodSecurity
 public class CustomerController {
     final private List<Customer> customers = List.of(
-            Customer.builder().id("001").name("Nguyễn Bảo Lợi").email("nguyenbaoloi@gmail.com").build(),
-            Customer.builder().id("002").name("Bảo Lợi").email("baoloi@gmail.com").build()
+            Customer.builder().id("001").name("Nguyễn Lâm Huy").email("nlh@gmail.com").build(),
+            Customer.builder().id("002").name("Huy dz").email("hi@gmail.com").build()
     );
     @GetMapping("/")
     public String homePage() {
