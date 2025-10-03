@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Product</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Create New Product</h1>
+        <br/>
+        <!-- 
+            - th:action="@{/save}": Gửi dữ liệu form đến URL /save.
+            - th:object="${product}": Liên kết form này với đối tượng 'product' được truyền từ controller.
+            - method="post": Sử dụng phương thức POST.
+        -->
+        <form action="#" th:action="@{/save}" th:object="${product}" method="post">
+            <table border="0" cellpadding="10">
+                <tr>
+                    <td>Product Name:</td>
+                    <!-- th:field="*{name}": Liên kết input này với thuộc tính 'name' của đối tượng 'product' -->
+                    <td><input type="text" th:field="*{name}" /></td>
+                </tr>
+                <tr>
+                    <td>Brand:</td>
+                    <!-- th:field="*{brand}": Liên kết input này với thuộc tính 'brand' -->
+                    <td><input type="text" th:field="*{brand}" /></td>
+                </tr>
+                <tr>
+                    <td>Made in:</td>
+                    <!-- th:field="*{madein}": Liên kết input này với thuộc tính 'madein' -->
+                    <td><input type="text" th:field="*{madein}" /></td>
+                </tr>
+                <tr>
+                    <td>Price:</td>
+                    <!-- th:field="*{price}": Liên kết input này với thuộc tính 'price' -->
+                    <td><input type="text" th:field="*{price}" /></td>
+                </tr>
+                <tr>
+                    <!-- colspan="2": Gộp 2 ô thành 1 -->
+                    <td colspan="2"><button type="submit">Save</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
